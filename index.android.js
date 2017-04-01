@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
-import {AppRegistry, RefreshControl, ScrollView, View, Text} 
-from 'react-native'
-
+import {AppRegistry, RefreshControl, ScrollView, View, Text} from 'react-native'
 class App extends Component {
 	constructor() {
 		super()
@@ -34,13 +32,15 @@ class App extends Component {
 		return fetch(url).then( r => r.json() )
 	}
 	render() {
-		let v = {paddingTop:30, paddingLeft:4}
-		var s = {fontSize:40, width:120, textAlign:'left'}
-		var d = {marginTop:6}
+		let v = {paddingTop:30}
+		var s = {fontSize:40, width:120, marginLeft:4}
+		var d = {marginTop:8}
 		var b = {fontWeight:'bold'}
+		var g = {backgroundColor:'lightgray'}, h = {backgroundColor:'white'}
 		let item = [ ]
 		for (let c of this.data) {
-			item.push(<View key={item.length} flexDirection='row'>
+			item.push(<View key={item.length} flexDirection='row'
+				style={item.length % 2 == 0 ? g : h }>
 				<Text style={s}>{c.symbol.toUpperCase()}</Text>
 				<View style={d} flexDirection='column'>
 					<Text style={b}>{c.Name}</Text>
