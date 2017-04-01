@@ -8,7 +8,7 @@ class App extends Component {
 		this.refresh()
 	}
 	refresh() {
-		this.refresing = true
+		this.refreshing = true
 		this.read('aapl,goog,msft,fb,amzn,snap,baba,orcl,ibm,' +
 			'intc,csco,pcln,adbe,nvda,nflx,bidu,pypl,yhoo,vmw,' +
 			'ebay,nok,hpq,intu,ea,adsk,symc,mchp,rht,xlnx,amd,' + 
